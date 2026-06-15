@@ -30,9 +30,9 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "Aurigma\\DesignAtomsApi\\" : "lib/" }
+        "psr-4": { "Aurigma\\DesignAtoms\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Aurigma\\DesignAtomsApi\\Test\\" : "test/" }
+        "psr-4": { "Aurigma\\DesignAtoms\\Test\\" : "test/" }
     }
 }

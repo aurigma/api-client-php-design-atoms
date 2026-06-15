@@ -62,6 +62,7 @@ class CreateEllipseItemModel implements ModelInterface, ArrayAccess, \JsonSerial
         'height' => 'float',
         'fill_color' => 'string',
         'border_color' => 'string',
+        'border_width' => 'float',
         'border_style' => '\Aurigma\DesignAtoms\Model\ItemBorderStyle'
     ];
 
@@ -77,6 +78,7 @@ class CreateEllipseItemModel implements ModelInterface, ArrayAccess, \JsonSerial
         'height' => 'float',
         'fill_color' => null,
         'border_color' => null,
+        'border_width' => 'float',
         'border_style' => null
     ];
 
@@ -90,6 +92,7 @@ class CreateEllipseItemModel implements ModelInterface, ArrayAccess, \JsonSerial
         'height' => false,
         'fill_color' => true,
         'border_color' => true,
+        'border_width' => true,
         'border_style' => false
     ];
 
@@ -183,6 +186,7 @@ class CreateEllipseItemModel implements ModelInterface, ArrayAccess, \JsonSerial
         'height' => 'height',
         'fill_color' => 'fillColor',
         'border_color' => 'borderColor',
+        'border_width' => 'borderWidth',
         'border_style' => 'borderStyle'
     ];
 
@@ -196,6 +200,7 @@ class CreateEllipseItemModel implements ModelInterface, ArrayAccess, \JsonSerial
         'height' => 'setHeight',
         'fill_color' => 'setFillColor',
         'border_color' => 'setBorderColor',
+        'border_width' => 'setBorderWidth',
         'border_style' => 'setBorderStyle'
     ];
 
@@ -209,6 +214,7 @@ class CreateEllipseItemModel implements ModelInterface, ArrayAccess, \JsonSerial
         'height' => 'getHeight',
         'fill_color' => 'getFillColor',
         'border_color' => 'getBorderColor',
+        'border_width' => 'getBorderWidth',
         'border_style' => 'getBorderStyle'
     ];
 
@@ -273,6 +279,7 @@ class CreateEllipseItemModel implements ModelInterface, ArrayAccess, \JsonSerial
         $this->setIfExists('height', $data ?? [], null);
         $this->setIfExists('fill_color', $data ?? [], null);
         $this->setIfExists('border_color', $data ?? [], null);
+        $this->setIfExists('border_width', $data ?? [], null);
         $this->setIfExists('border_style', $data ?? [], null);
     }
 
@@ -436,6 +443,40 @@ class CreateEllipseItemModel implements ModelInterface, ArrayAccess, \JsonSerial
             }
         }
         $this->container['border_color'] = $border_color;
+
+        return $this;
+    }
+
+    /**
+     * Gets border_width
+     *
+     * @return float|null
+     */
+    public function getBorderWidth()
+    {
+        return $this->container['border_width'];
+    }
+
+    /**
+     * Sets border_width
+     *
+     * @param float|null $border_width Border width (in pixels).
+     *
+     * @return self
+     */
+    public function setBorderWidth($border_width)
+    {
+        if (is_null($border_width)) {
+            array_push($this->openAPINullablesSetToNull, 'border_width');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('border_width', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['border_width'] = $border_width;
 
         return $this;
     }
