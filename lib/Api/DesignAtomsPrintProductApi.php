@@ -13872,7 +13872,7 @@ class DesignAtomsPrintProductApi
      *
      * @throws \Aurigma\DesignAtoms\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\GeneralConflictDto
+     * @return \Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\GeneralConflictDto
      */
     public function designAtomsPrintProductUpdateDesignSurfaceDownMockup($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
     {
@@ -13898,7 +13898,7 @@ class DesignAtomsPrintProductApi
      *
      * @throws \Aurigma\DesignAtoms\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\GeneralConflictDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\GeneralConflictDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function designAtomsPrintProductUpdateDesignSurfaceDownMockupWithHttpInfo($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
     {
@@ -13941,11 +13941,11 @@ class DesignAtomsPrintProductApi
 
             switch($statusCode) {
                 case 200:
-                    if ('mixed' === '\SplFileObject') {
+                    if ('\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('mixed' !== 'string') {
+                        if ('\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -13963,7 +13963,7 @@ class DesignAtomsPrintProductApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'mixed', []),
+                        ObjectSerializer::deserialize($content, '\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -14050,7 +14050,7 @@ class DesignAtomsPrintProductApi
                     ];
             }
 
-            $returnType = 'mixed';
+            $returnType = '\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -14083,7 +14083,7 @@ class DesignAtomsPrintProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed',
+                        '\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -14167,7 +14167,7 @@ class DesignAtomsPrintProductApi
      */
     public function designAtomsPrintProductUpdateDesignSurfaceDownMockupAsyncWithHttpInfo($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
     {
-        $returnType = 'mixed';
+        $returnType = '\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto';
         $request = $this->designAtomsPrintProductUpdateDesignSurfaceDownMockupRequest($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file, $contentType);
 
         return $this->client
@@ -14911,7 +14911,7 @@ class DesignAtomsPrintProductApi
      *
      * @throws \Aurigma\DesignAtoms\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return mixed|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\GeneralConflictDto
+     * @return \Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\GeneralConflictDto
      */
     public function designAtomsPrintProductUpdateDesignSurfaceUpMockup($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
     {
@@ -14937,7 +14937,7 @@ class DesignAtomsPrintProductApi
      *
      * @throws \Aurigma\DesignAtoms\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of mixed|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\GeneralConflictDto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\GeneralConflictDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function designAtomsPrintProductUpdateDesignSurfaceUpMockupWithHttpInfo($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
     {
@@ -14980,11 +14980,11 @@ class DesignAtomsPrintProductApi
 
             switch($statusCode) {
                 case 200:
-                    if ('mixed' === '\SplFileObject') {
+                    if ('\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('mixed' !== 'string') {
+                        if ('\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -15002,7 +15002,7 @@ class DesignAtomsPrintProductApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'mixed', []),
+                        ObjectSerializer::deserialize($content, '\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -15089,7 +15089,7 @@ class DesignAtomsPrintProductApi
                     ];
             }
 
-            $returnType = 'mixed';
+            $returnType = '\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -15122,7 +15122,7 @@ class DesignAtomsPrintProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed',
+                        '\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -15206,7 +15206,7 @@ class DesignAtomsPrintProductApi
      */
     public function designAtomsPrintProductUpdateDesignSurfaceUpMockupAsyncWithHttpInfo($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
     {
-        $returnType = 'mixed';
+        $returnType = '\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto';
         $request = $this->designAtomsPrintProductUpdateDesignSurfaceUpMockupRequest($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file, $contentType);
 
         return $this->client

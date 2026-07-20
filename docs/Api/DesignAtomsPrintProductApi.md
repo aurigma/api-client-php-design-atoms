@@ -2565,7 +2565,7 @@ try {
 ## `designAtomsPrintProductUpdateDesignSurfaceDownMockup()`
 
 ```php
-designAtomsPrintProductUpdateDesignSurfaceDownMockup($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file): mixed
+designAtomsPrintProductUpdateDesignSurfaceDownMockup($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file): \Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto
 ```
 
 Updates a content file of down-mockup for the specified print-product surface in an existing design file.
@@ -2637,7 +2637,7 @@ try {
 
 ### Return type
 
-**mixed**
+[**\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto**](../Model/DesignSurfaceMockupDto.md)
 
 ### Authorization
 
@@ -2737,7 +2737,7 @@ try {
 ## `designAtomsPrintProductUpdateDesignSurfaceUpMockup()`
 
 ```php
-designAtomsPrintProductUpdateDesignSurfaceUpMockup($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file): mixed
+designAtomsPrintProductUpdateDesignSurfaceUpMockup($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file): \Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto
 ```
 
 Updates a content file of up-mockup for the specified print-product surface in an existing design.
@@ -2809,7 +2809,7 @@ try {
 
 ### Return type
 
-**mixed**
+[**\Aurigma\DesignAtoms\Model\DesignSurfaceMockupDto**](../Model/DesignSurfaceMockupDto.md)
 
 ### Authorization
 
