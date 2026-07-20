@@ -2565,7 +2565,7 @@ try {
 ## `designAtomsPrintProductUpdateDesignSurfaceDownMockup()`
 
 ```php
-designAtomsPrintProductUpdateDesignSurfaceDownMockup($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $source_file): mixed
+designAtomsPrintProductUpdateDesignSurfaceDownMockup($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file): mixed
 ```
 
 Updates a content file of down-mockup for the specified print-product surface in an existing design file.
@@ -2609,10 +2609,12 @@ $private_storage_owner = 'private_storage_owner_example'; // string | Private st
 $tenant_id = 56; // int | Tenant ID.
 $position_top = 3.4; // float | Y axis position.
 $position_left = 3.4; // float | X axis position.
+$dpi_x = 3.4; // float | Mockup image horizontal resolution.
+$dpi_y = 3.4; // float | Mockup image vertical resolution.
 $source_file = "/path/to/file.txt"; // \SplFileObject | New mockup file.
 
 try {
-    $result = $apiInstance->designAtomsPrintProductUpdateDesignSurfaceDownMockup($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $source_file);
+    $result = $apiInstance->designAtomsPrintProductUpdateDesignSurfaceDownMockup($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DesignAtomsPrintProductApi->designAtomsPrintProductUpdateDesignSurfaceDownMockup: ', $e->getMessage(), PHP_EOL;
@@ -2629,6 +2631,8 @@ try {
 | **tenant_id** | **int**| Tenant ID. | [optional] |
 | **position_top** | **float**| Y axis position. | [optional] |
 | **position_left** | **float**| X axis position. | [optional] |
+| **dpi_x** | **float**| Mockup image horizontal resolution. | [optional] |
+| **dpi_y** | **float**| Mockup image vertical resolution. | [optional] |
 | **source_file** | **\SplFileObject****\SplFileObject**| New mockup file. | [optional] |
 
 ### Return type
@@ -2733,7 +2737,7 @@ try {
 ## `designAtomsPrintProductUpdateDesignSurfaceUpMockup()`
 
 ```php
-designAtomsPrintProductUpdateDesignSurfaceUpMockup($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $source_file): mixed
+designAtomsPrintProductUpdateDesignSurfaceUpMockup($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file): mixed
 ```
 
 Updates a content file of up-mockup for the specified print-product surface in an existing design.
@@ -2777,10 +2781,12 @@ $private_storage_owner = 'private_storage_owner_example'; // string | Private st
 $tenant_id = 56; // int | Tenant ID.
 $position_top = 3.4; // float | Y axis position.
 $position_left = 3.4; // float | X axis position.
+$dpi_x = 3.4; // float | Mockup image horizontal resolution.
+$dpi_y = 3.4; // float | Mockup image vertical resolution.
 $source_file = "/path/to/file.txt"; // \SplFileObject | New mockup file.
 
 try {
-    $result = $apiInstance->designAtomsPrintProductUpdateDesignSurfaceUpMockup($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $source_file);
+    $result = $apiInstance->designAtomsPrintProductUpdateDesignSurfaceUpMockup($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DesignAtomsPrintProductApi->designAtomsPrintProductUpdateDesignSurfaceUpMockup: ', $e->getMessage(), PHP_EOL;
@@ -2797,6 +2803,8 @@ try {
 | **tenant_id** | **int**| Tenant ID. | [optional] |
 | **position_top** | **float**| Y axis position. | [optional] |
 | **position_left** | **float**| X axis position. | [optional] |
+| **dpi_x** | **float**| Mockup image horizontal resolution. | [optional] |
+| **dpi_y** | **float**| Mockup image vertical resolution. | [optional] |
 | **source_file** | **\SplFileObject****\SplFileObject**| New mockup file. | [optional] |
 
 ### Return type

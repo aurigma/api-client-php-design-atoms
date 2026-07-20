@@ -417,6 +417,7 @@ class DesignSurfaceMockupDto implements ModelInterface, ArrayAccess, \JsonSerial
      * Gets resolution
      *
      * @return int|null
+     * @deprecated
      */
     public function getResolution()
     {
@@ -429,6 +430,7 @@ class DesignSurfaceMockupDto implements ModelInterface, ArrayAccess, \JsonSerial
      * @param int|null $resolution Mockup image resolution (DPI).
      *
      * @return self
+     * @deprecated
      */
     public function setResolution($resolution)
     {

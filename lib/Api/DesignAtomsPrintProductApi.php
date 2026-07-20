@@ -13865,6 +13865,8 @@ class DesignAtomsPrintProductApi
      * @param  int $tenant_id Tenant ID. (optional)
      * @param  float $position_top Y axis position. (optional)
      * @param  float $position_left X axis position. (optional)
+     * @param  float $dpi_x Mockup image horizontal resolution. (optional)
+     * @param  float $dpi_y Mockup image vertical resolution. (optional)
      * @param  \SplFileObject $source_file New mockup file. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'] to see the possible values for this operation
      *
@@ -13872,9 +13874,9 @@ class DesignAtomsPrintProductApi
      * @throws \InvalidArgumentException
      * @return mixed|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\GeneralConflictDto
      */
-    public function designAtomsPrintProductUpdateDesignSurfaceDownMockup($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
+    public function designAtomsPrintProductUpdateDesignSurfaceDownMockup($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
     {
-        list($response) = $this->designAtomsPrintProductUpdateDesignSurfaceDownMockupWithHttpInfo($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $source_file, $contentType);
+        list($response) = $this->designAtomsPrintProductUpdateDesignSurfaceDownMockupWithHttpInfo($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file, $contentType);
         return $response;
     }
 
@@ -13889,6 +13891,8 @@ class DesignAtomsPrintProductApi
      * @param  int $tenant_id Tenant ID. (optional)
      * @param  float $position_top Y axis position. (optional)
      * @param  float $position_left X axis position. (optional)
+     * @param  float $dpi_x Mockup image horizontal resolution. (optional)
+     * @param  float $dpi_y Mockup image vertical resolution. (optional)
      * @param  \SplFileObject $source_file New mockup file. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'] to see the possible values for this operation
      *
@@ -13896,9 +13900,9 @@ class DesignAtomsPrintProductApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\GeneralConflictDto, HTTP status code, HTTP response headers (array of strings)
      */
-    public function designAtomsPrintProductUpdateDesignSurfaceDownMockupWithHttpInfo($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
+    public function designAtomsPrintProductUpdateDesignSurfaceDownMockupWithHttpInfo($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
     {
-        $request = $this->designAtomsPrintProductUpdateDesignSurfaceDownMockupRequest($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $source_file, $contentType);
+        $request = $this->designAtomsPrintProductUpdateDesignSurfaceDownMockupRequest($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -14124,15 +14128,17 @@ class DesignAtomsPrintProductApi
      * @param  int $tenant_id Tenant ID. (optional)
      * @param  float $position_top Y axis position. (optional)
      * @param  float $position_left X axis position. (optional)
+     * @param  float $dpi_x Mockup image horizontal resolution. (optional)
+     * @param  float $dpi_y Mockup image vertical resolution. (optional)
      * @param  \SplFileObject $source_file New mockup file. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function designAtomsPrintProductUpdateDesignSurfaceDownMockupAsync($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
+    public function designAtomsPrintProductUpdateDesignSurfaceDownMockupAsync($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
     {
-        return $this->designAtomsPrintProductUpdateDesignSurfaceDownMockupAsyncWithHttpInfo($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $source_file, $contentType)
+        return $this->designAtomsPrintProductUpdateDesignSurfaceDownMockupAsyncWithHttpInfo($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -14151,16 +14157,18 @@ class DesignAtomsPrintProductApi
      * @param  int $tenant_id Tenant ID. (optional)
      * @param  float $position_top Y axis position. (optional)
      * @param  float $position_left X axis position. (optional)
+     * @param  float $dpi_x Mockup image horizontal resolution. (optional)
+     * @param  float $dpi_y Mockup image vertical resolution. (optional)
      * @param  \SplFileObject $source_file New mockup file. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function designAtomsPrintProductUpdateDesignSurfaceDownMockupAsyncWithHttpInfo($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
+    public function designAtomsPrintProductUpdateDesignSurfaceDownMockupAsyncWithHttpInfo($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
     {
         $returnType = 'mixed';
-        $request = $this->designAtomsPrintProductUpdateDesignSurfaceDownMockupRequest($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $source_file, $contentType);
+        $request = $this->designAtomsPrintProductUpdateDesignSurfaceDownMockupRequest($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -14207,13 +14215,15 @@ class DesignAtomsPrintProductApi
      * @param  int $tenant_id Tenant ID. (optional)
      * @param  float $position_top Y axis position. (optional)
      * @param  float $position_left X axis position. (optional)
+     * @param  float $dpi_x Mockup image horizontal resolution. (optional)
+     * @param  float $dpi_y Mockup image vertical resolution. (optional)
      * @param  \SplFileObject $source_file New mockup file. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function designAtomsPrintProductUpdateDesignSurfaceDownMockupRequest($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
+    public function designAtomsPrintProductUpdateDesignSurfaceDownMockupRequest($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceDownMockup'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -14229,6 +14239,8 @@ class DesignAtomsPrintProductApi
                 'Missing the required parameter $surface_id when calling designAtomsPrintProductUpdateDesignSurfaceDownMockup'
             );
         }
+
+
 
 
 
@@ -14287,6 +14299,14 @@ class DesignAtomsPrintProductApi
         // form params
         if ($position_left !== null) {
             $formParams['position.left'] = ObjectSerializer::toFormValue($position_left);
+        }
+        // form params
+        if ($dpi_x !== null) {
+            $formParams['dpiX'] = ObjectSerializer::toFormValue($dpi_x);
+        }
+        // form params
+        if ($dpi_y !== null) {
+            $formParams['dpiY'] = ObjectSerializer::toFormValue($dpi_y);
         }
         // form params
         if ($source_file !== null) {
@@ -14884,6 +14904,8 @@ class DesignAtomsPrintProductApi
      * @param  int $tenant_id Tenant ID. (optional)
      * @param  float $position_top Y axis position. (optional)
      * @param  float $position_left X axis position. (optional)
+     * @param  float $dpi_x Mockup image horizontal resolution. (optional)
+     * @param  float $dpi_y Mockup image vertical resolution. (optional)
      * @param  \SplFileObject $source_file New mockup file. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'] to see the possible values for this operation
      *
@@ -14891,9 +14913,9 @@ class DesignAtomsPrintProductApi
      * @throws \InvalidArgumentException
      * @return mixed|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\GeneralConflictDto
      */
-    public function designAtomsPrintProductUpdateDesignSurfaceUpMockup($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
+    public function designAtomsPrintProductUpdateDesignSurfaceUpMockup($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
     {
-        list($response) = $this->designAtomsPrintProductUpdateDesignSurfaceUpMockupWithHttpInfo($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $source_file, $contentType);
+        list($response) = $this->designAtomsPrintProductUpdateDesignSurfaceUpMockupWithHttpInfo($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file, $contentType);
         return $response;
     }
 
@@ -14908,6 +14930,8 @@ class DesignAtomsPrintProductApi
      * @param  int $tenant_id Tenant ID. (optional)
      * @param  float $position_top Y axis position. (optional)
      * @param  float $position_left X axis position. (optional)
+     * @param  float $dpi_x Mockup image horizontal resolution. (optional)
+     * @param  float $dpi_y Mockup image vertical resolution. (optional)
      * @param  \SplFileObject $source_file New mockup file. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'] to see the possible values for this operation
      *
@@ -14915,9 +14939,9 @@ class DesignAtomsPrintProductApi
      * @throws \InvalidArgumentException
      * @return array of mixed|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\ProblemDetails|\Aurigma\DesignAtoms\Model\GeneralConflictDto, HTTP status code, HTTP response headers (array of strings)
      */
-    public function designAtomsPrintProductUpdateDesignSurfaceUpMockupWithHttpInfo($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
+    public function designAtomsPrintProductUpdateDesignSurfaceUpMockupWithHttpInfo($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
     {
-        $request = $this->designAtomsPrintProductUpdateDesignSurfaceUpMockupRequest($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $source_file, $contentType);
+        $request = $this->designAtomsPrintProductUpdateDesignSurfaceUpMockupRequest($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -15143,15 +15167,17 @@ class DesignAtomsPrintProductApi
      * @param  int $tenant_id Tenant ID. (optional)
      * @param  float $position_top Y axis position. (optional)
      * @param  float $position_left X axis position. (optional)
+     * @param  float $dpi_x Mockup image horizontal resolution. (optional)
+     * @param  float $dpi_y Mockup image vertical resolution. (optional)
      * @param  \SplFileObject $source_file New mockup file. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function designAtomsPrintProductUpdateDesignSurfaceUpMockupAsync($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
+    public function designAtomsPrintProductUpdateDesignSurfaceUpMockupAsync($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
     {
-        return $this->designAtomsPrintProductUpdateDesignSurfaceUpMockupAsyncWithHttpInfo($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $source_file, $contentType)
+        return $this->designAtomsPrintProductUpdateDesignSurfaceUpMockupAsyncWithHttpInfo($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -15170,16 +15196,18 @@ class DesignAtomsPrintProductApi
      * @param  int $tenant_id Tenant ID. (optional)
      * @param  float $position_top Y axis position. (optional)
      * @param  float $position_left X axis position. (optional)
+     * @param  float $dpi_x Mockup image horizontal resolution. (optional)
+     * @param  float $dpi_y Mockup image vertical resolution. (optional)
      * @param  \SplFileObject $source_file New mockup file. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function designAtomsPrintProductUpdateDesignSurfaceUpMockupAsyncWithHttpInfo($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
+    public function designAtomsPrintProductUpdateDesignSurfaceUpMockupAsyncWithHttpInfo($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
     {
         $returnType = 'mixed';
-        $request = $this->designAtomsPrintProductUpdateDesignSurfaceUpMockupRequest($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $source_file, $contentType);
+        $request = $this->designAtomsPrintProductUpdateDesignSurfaceUpMockupRequest($id, $surface_id, $private_storage_owner, $tenant_id, $position_top, $position_left, $dpi_x, $dpi_y, $source_file, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -15226,13 +15254,15 @@ class DesignAtomsPrintProductApi
      * @param  int $tenant_id Tenant ID. (optional)
      * @param  float $position_top Y axis position. (optional)
      * @param  float $position_left X axis position. (optional)
+     * @param  float $dpi_x Mockup image horizontal resolution. (optional)
+     * @param  float $dpi_y Mockup image vertical resolution. (optional)
      * @param  \SplFileObject $source_file New mockup file. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function designAtomsPrintProductUpdateDesignSurfaceUpMockupRequest($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
+    public function designAtomsPrintProductUpdateDesignSurfaceUpMockupRequest($id, $surface_id, $private_storage_owner = null, $tenant_id = null, $position_top = null, $position_left = null, $dpi_x = null, $dpi_y = null, $source_file = null, string $contentType = self::contentTypes['designAtomsPrintProductUpdateDesignSurfaceUpMockup'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -15248,6 +15278,8 @@ class DesignAtomsPrintProductApi
                 'Missing the required parameter $surface_id when calling designAtomsPrintProductUpdateDesignSurfaceUpMockup'
             );
         }
+
+
 
 
 
@@ -15306,6 +15338,14 @@ class DesignAtomsPrintProductApi
         // form params
         if ($position_left !== null) {
             $formParams['position.left'] = ObjectSerializer::toFormValue($position_left);
+        }
+        // form params
+        if ($dpi_x !== null) {
+            $formParams['dpiX'] = ObjectSerializer::toFormValue($dpi_x);
+        }
+        // form params
+        if ($dpi_y !== null) {
+            $formParams['dpiY'] = ObjectSerializer::toFormValue($dpi_y);
         }
         // form params
         if ($source_file !== null) {
