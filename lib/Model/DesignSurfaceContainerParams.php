@@ -59,8 +59,6 @@ class DesignSurfaceContainerParams implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'size' => '\Aurigma\DesignAtoms\Model\DesignSurfaceContainerParamsSize',
-        'position' => '\Aurigma\DesignAtoms\Model\DesignSurfaceContainerParamsPosition',
         'mode' => '\Aurigma\DesignAtoms\Model\ContainerPrintingMode',
         'constraints' => '\Aurigma\DesignAtoms\Model\DesignSurfaceContainerParamsConstraints',
         'limited_color_settings' => '\Aurigma\DesignAtoms\Model\DesignSurfaceContainerParamsLimitedColorSettings',
@@ -77,8 +75,6 @@ class DesignSurfaceContainerParams implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPIFormats = [
         'name' => null,
-        'size' => null,
-        'position' => null,
         'mode' => null,
         'constraints' => null,
         'limited_color_settings' => null,
@@ -93,8 +89,6 @@ class DesignSurfaceContainerParams implements ModelInterface, ArrayAccess, \Json
       */
     protected static array $openAPINullables = [
         'name' => true,
-        'size' => true,
-        'position' => true,
         'mode' => false,
         'constraints' => true,
         'limited_color_settings' => true,
@@ -189,8 +183,6 @@ class DesignSurfaceContainerParams implements ModelInterface, ArrayAccess, \Json
      */
     protected static $attributeMap = [
         'name' => 'name',
-        'size' => 'size',
-        'position' => 'position',
         'mode' => 'mode',
         'constraints' => 'constraints',
         'limited_color_settings' => 'limitedColorSettings',
@@ -205,8 +197,6 @@ class DesignSurfaceContainerParams implements ModelInterface, ArrayAccess, \Json
      */
     protected static $setters = [
         'name' => 'setName',
-        'size' => 'setSize',
-        'position' => 'setPosition',
         'mode' => 'setMode',
         'constraints' => 'setConstraints',
         'limited_color_settings' => 'setLimitedColorSettings',
@@ -221,8 +211,6 @@ class DesignSurfaceContainerParams implements ModelInterface, ArrayAccess, \Json
      */
     protected static $getters = [
         'name' => 'getName',
-        'size' => 'getSize',
-        'position' => 'getPosition',
         'mode' => 'getMode',
         'constraints' => 'getConstraints',
         'limited_color_settings' => 'getLimitedColorSettings',
@@ -288,8 +276,6 @@ class DesignSurfaceContainerParams implements ModelInterface, ArrayAccess, \Json
     public function __construct(array $data = null)
     {
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('size', $data ?? [], null);
-        $this->setIfExists('position', $data ?? [], null);
         $this->setIfExists('mode', $data ?? [], null);
         $this->setIfExists('constraints', $data ?? [], null);
         $this->setIfExists('limited_color_settings', $data ?? [], null);
@@ -369,74 +355,6 @@ class DesignSurfaceContainerParams implements ModelInterface, ArrayAccess, \Json
             }
         }
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets size
-     *
-     * @return \Aurigma\DesignAtoms\Model\DesignSurfaceContainerParamsSize|null
-     */
-    public function getSize()
-    {
-        return $this->container['size'];
-    }
-
-    /**
-     * Sets size
-     *
-     * @param \Aurigma\DesignAtoms\Model\DesignSurfaceContainerParamsSize|null $size size
-     *
-     * @return self
-     */
-    public function setSize($size)
-    {
-        if (is_null($size)) {
-            array_push($this->openAPINullablesSetToNull, 'size');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('size', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['size'] = $size;
-
-        return $this;
-    }
-
-    /**
-     * Gets position
-     *
-     * @return \Aurigma\DesignAtoms\Model\DesignSurfaceContainerParamsPosition|null
-     */
-    public function getPosition()
-    {
-        return $this->container['position'];
-    }
-
-    /**
-     * Sets position
-     *
-     * @param \Aurigma\DesignAtoms\Model\DesignSurfaceContainerParamsPosition|null $position position
-     *
-     * @return self
-     */
-    public function setPosition($position)
-    {
-        if (is_null($position)) {
-            array_push($this->openAPINullablesSetToNull, 'position');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('position', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['position'] = $position;
 
         return $this;
     }

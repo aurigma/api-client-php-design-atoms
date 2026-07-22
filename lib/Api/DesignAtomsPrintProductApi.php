@@ -1193,7 +1193,7 @@ class DesignAtomsPrintProductApi
     /**
      * Operation designAtomsPrintProductAddDesignSurfaceContainer
      *
-     * Returns a list of print-product container descriptions of the specified design file.
+     * Inserts a new print-product container to the certain surface in an existing design file.
      *
      * @param  string $id Design identifier. (required)
      * @param  int $index index (optional)
@@ -1216,7 +1216,7 @@ class DesignAtomsPrintProductApi
     /**
      * Operation designAtomsPrintProductAddDesignSurfaceContainerWithHttpInfo
      *
-     * Returns a list of print-product container descriptions of the specified design file.
+     * Inserts a new print-product container to the certain surface in an existing design file.
      *
      * @param  string $id Design identifier. (required)
      * @param  int $index (optional)
@@ -1415,7 +1415,7 @@ class DesignAtomsPrintProductApi
     /**
      * Operation designAtomsPrintProductAddDesignSurfaceContainerAsync
      *
-     * Returns a list of print-product container descriptions of the specified design file.
+     * Inserts a new print-product container to the certain surface in an existing design file.
      *
      * @param  string $id Design identifier. (required)
      * @param  int $index (optional)
@@ -1441,7 +1441,7 @@ class DesignAtomsPrintProductApi
     /**
      * Operation designAtomsPrintProductAddDesignSurfaceContainerAsyncWithHttpInfo
      *
-     * Returns a list of print-product container descriptions of the specified design file.
+     * Inserts a new print-product container to the certain surface in an existing design file.
      *
      * @param  string $id Design identifier. (required)
      * @param  int $index (optional)
@@ -12883,7 +12883,7 @@ class DesignAtomsPrintProductApi
     /**
      * Operation designAtomsPrintProductUpdateDesignSurfaceContainer
      *
-     * Returns a list of print-product container descriptions of the specified design file.
+     * Updates a specified print-product container in an existing design file.
      *
      * @param  string $id Design identifier. (required)
      * @param  string $container_id container_id (required)
@@ -12906,7 +12906,7 @@ class DesignAtomsPrintProductApi
     /**
      * Operation designAtomsPrintProductUpdateDesignSurfaceContainerWithHttpInfo
      *
-     * Returns a list of print-product container descriptions of the specified design file.
+     * Updates a specified print-product container in an existing design file.
      *
      * @param  string $id Design identifier. (required)
      * @param  string $container_id (required)
@@ -13105,7 +13105,7 @@ class DesignAtomsPrintProductApi
     /**
      * Operation designAtomsPrintProductUpdateDesignSurfaceContainerAsync
      *
-     * Returns a list of print-product container descriptions of the specified design file.
+     * Updates a specified print-product container in an existing design file.
      *
      * @param  string $id Design identifier. (required)
      * @param  string $container_id (required)
@@ -13131,7 +13131,7 @@ class DesignAtomsPrintProductApi
     /**
      * Operation designAtomsPrintProductUpdateDesignSurfaceContainerAsyncWithHttpInfo
      *
-     * Returns a list of print-product container descriptions of the specified design file.
+     * Updates a specified print-product container in an existing design file.
      *
      * @param  string $id Design identifier. (required)
      * @param  string $container_id (required)

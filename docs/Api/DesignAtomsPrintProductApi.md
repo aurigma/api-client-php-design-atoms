@@ -6,7 +6,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | ------------- | ------------- | ------------- |
 | [**designAtomsPrintProductAddDesignPrintArea()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductAddDesignPrintArea) | **POST** /api/atoms/v1/designs/{id}/print-product/print-areas | Inserts a new print-area created by the description at the specified position in an existing design file.  Print-area identifier will be reset by auto-generated value to prevent identifiers collisions. |
 | [**designAtomsPrintProductAddDesignPrintAreaModel()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductAddDesignPrintAreaModel) | **POST** /api/atoms/v1/designs/{id}/print-product/print-areas/model | Inserts a new print-area provided as a json-serialized model at the specified position in an existing design file.  Print-area identifier will be reset by auto-generated value to prevent identifiers collisions. |
-| [**designAtomsPrintProductAddDesignSurfaceContainer()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductAddDesignSurfaceContainer) | **POST** /api/atoms/v1/designs/{id}/print-product/containers | Returns a list of print-product container descriptions of the specified design file. |
+| [**designAtomsPrintProductAddDesignSurfaceContainer()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductAddDesignSurfaceContainer) | **POST** /api/atoms/v1/designs/{id}/print-product/containers | Inserts a new print-product container to the certain surface in an existing design file. |
 | [**designAtomsPrintProductAddDesignSurfaceContainerModel()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductAddDesignSurfaceContainerModel) | **POST** /api/atoms/v1/designs/{id}/print-product/containers/model | Inserts a new print-product container provided as a json-serialized model to the certain surface in an existing design file.  Print-product container identifier will be reset by auto-generated value to prevent identifiers collisions. |
 | [**designAtomsPrintProductAddDesignSurfaceItemModel()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductAddDesignSurfaceItemModel) | **POST** /api/atoms/v1/designs/{id}/print-product/items/model | Inserts a new print-product item provided as a json-serialized model to the specified surface in an existing design file.  Item identifier will be reset by auto-generated value to prevent identifiers collisions. |
 | [**designAtomsPrintProductAddDesignSurfaceModel()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductAddDesignSurfaceModel) | **POST** /api/atoms/v1/designs/{id}/print-product/surfaces/model | Inserts a new surface provided as a json-serialized model at the specified position in an existing design file.  All design elements identifiers within the surface (including surface identifier) will be reset by auto-generated values to prevent identifiers collisions. |
@@ -33,7 +33,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**designAtomsPrintProductUpdateDesignPrintArea()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductUpdateDesignPrintArea) | **PUT** /api/atoms/v1/designs/{id}/print-product/print-areas/{printAreaId} | Updates a specified print-area using a description in an existing design file. |
 | [**designAtomsPrintProductUpdateDesignPrintAreaModel()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductUpdateDesignPrintAreaModel) | **PUT** /api/atoms/v1/designs/{id}/print-product/print-areas/{printAreaId}/model | Updates a specified print-area in an existing design file with the data provided as a json-serialized print-area model. |
 | [**designAtomsPrintProductUpdateDesignProductModel()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductUpdateDesignProductModel) | **PUT** /api/atoms/v1/designs/{id}/print-product/model | Updates a print-product provided as a json-serialized model is the specified design file. |
-| [**designAtomsPrintProductUpdateDesignSurfaceContainer()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductUpdateDesignSurfaceContainer) | **PUT** /api/atoms/v1/designs/{id}/print-product/containers/{containerId} | Returns a list of print-product container descriptions of the specified design file. |
+| [**designAtomsPrintProductUpdateDesignSurfaceContainer()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductUpdateDesignSurfaceContainer) | **PUT** /api/atoms/v1/designs/{id}/print-product/containers/{containerId} | Updates a specified print-product container in an existing design file. |
 | [**designAtomsPrintProductUpdateDesignSurfaceContainerModel()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductUpdateDesignSurfaceContainerModel) | **PUT** /api/atoms/v1/designs/{id}/print-product/containers/{containerId}/model | Updates a specified print-product container in an existing design file with the data provided as a json-serialized model. |
 | [**designAtomsPrintProductUpdateDesignSurfaceDownMockup()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductUpdateDesignSurfaceDownMockup) | **PATCH** /api/atoms/v1/designs/{id}/print-product/surfaces/{surfaceId}/mockup-down | Updates a content file of down-mockup for the specified print-product surface in an existing design file. |
 | [**designAtomsPrintProductUpdateDesignSurfaceItemModel()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductUpdateDesignSurfaceItemModel) | **PUT** /api/atoms/v1/designs/{id}/print-product/items/{itemId}/model | Updates a specified print-product surface item in an existing design file with the data provided as a json-serialized item model. |
@@ -208,7 +208,7 @@ try {
 designAtomsPrintProductAddDesignSurfaceContainer($id, $index, $surface_id, $private_storage_owner, $tenant_id, $design_surface_container_params): \Aurigma\DesignAtoms\Model\DesignSurfaceContainerDto
 ```
 
-Returns a list of print-product container descriptions of the specified design file.
+Inserts a new print-product container to the certain surface in an existing design file.
 
 ### Example
 
@@ -2402,7 +2402,7 @@ void (empty response body)
 designAtomsPrintProductUpdateDesignSurfaceContainer($id, $container_id, $surface_id, $private_storage_owner, $tenant_id, $design_surface_container_params): \Aurigma\DesignAtoms\Model\DesignSurfaceContainerDto
 ```
 
-Returns a list of print-product container descriptions of the specified design file.
+Updates a specified print-product container in an existing design file.
 
 ### Example
 
