@@ -8,8 +8,6 @@ Name | Type | Description | Notes
 **name** | **string** | Container name. | [optional]
 **surface_id** | **string** | Parent surface identifier. | [optional]
 **index** | **int** | Container index within containers list of a surface (0-based). | [optional]
-**size** | [**\Aurigma\DesignAtoms\Model\DesignSurfaceContainerDtoSize**](DesignSurfaceContainerDtoSize.md) |  | [optional]
-**position** | [**\Aurigma\DesignAtoms\Model\DesignSurfaceContainerDtoPosition**](DesignSurfaceContainerDtoPosition.md) |  | [optional]
 **mode** | [**\Aurigma\DesignAtoms\Model\ContainerPrintingMode**](ContainerPrintingMode.md) | Container printing mode. | [optional]
 **constraints** | [**\Aurigma\DesignAtoms\Model\DesignSurfaceContainerDtoConstraints**](DesignSurfaceContainerDtoConstraints.md) |  | [optional]
 **limited_color_settings** | [**\Aurigma\DesignAtoms\Model\DesignSurfaceContainerDtoLimitedColorSettings**](DesignSurfaceContainerDtoLimitedColorSettings.md) |  | [optional]

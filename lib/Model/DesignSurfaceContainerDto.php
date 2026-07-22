@@ -62,8 +62,6 @@ class DesignSurfaceContainerDto implements ModelInterface, ArrayAccess, \JsonSer
         'name' => 'string',
         'surface_id' => 'string',
         'index' => 'int',
-        'size' => '\Aurigma\DesignAtoms\Model\DesignSurfaceContainerDtoSize',
-        'position' => '\Aurigma\DesignAtoms\Model\DesignSurfaceContainerDtoPosition',
         'mode' => '\Aurigma\DesignAtoms\Model\ContainerPrintingMode',
         'constraints' => '\Aurigma\DesignAtoms\Model\DesignSurfaceContainerDtoConstraints',
         'limited_color_settings' => '\Aurigma\DesignAtoms\Model\DesignSurfaceContainerDtoLimitedColorSettings',
@@ -83,8 +81,6 @@ class DesignSurfaceContainerDto implements ModelInterface, ArrayAccess, \JsonSer
         'name' => null,
         'surface_id' => null,
         'index' => 'int32',
-        'size' => null,
-        'position' => null,
         'mode' => null,
         'constraints' => null,
         'limited_color_settings' => null,
@@ -102,8 +98,6 @@ class DesignSurfaceContainerDto implements ModelInterface, ArrayAccess, \JsonSer
         'name' => true,
         'surface_id' => true,
         'index' => false,
-        'size' => true,
-        'position' => true,
         'mode' => false,
         'constraints' => true,
         'limited_color_settings' => true,
@@ -201,8 +195,6 @@ class DesignSurfaceContainerDto implements ModelInterface, ArrayAccess, \JsonSer
         'name' => 'name',
         'surface_id' => 'surfaceId',
         'index' => 'index',
-        'size' => 'size',
-        'position' => 'position',
         'mode' => 'mode',
         'constraints' => 'constraints',
         'limited_color_settings' => 'limitedColorSettings',
@@ -220,8 +212,6 @@ class DesignSurfaceContainerDto implements ModelInterface, ArrayAccess, \JsonSer
         'name' => 'setName',
         'surface_id' => 'setSurfaceId',
         'index' => 'setIndex',
-        'size' => 'setSize',
-        'position' => 'setPosition',
         'mode' => 'setMode',
         'constraints' => 'setConstraints',
         'limited_color_settings' => 'setLimitedColorSettings',
@@ -239,8 +229,6 @@ class DesignSurfaceContainerDto implements ModelInterface, ArrayAccess, \JsonSer
         'name' => 'getName',
         'surface_id' => 'getSurfaceId',
         'index' => 'getIndex',
-        'size' => 'getSize',
-        'position' => 'getPosition',
         'mode' => 'getMode',
         'constraints' => 'getConstraints',
         'limited_color_settings' => 'getLimitedColorSettings',
@@ -309,8 +297,6 @@ class DesignSurfaceContainerDto implements ModelInterface, ArrayAccess, \JsonSer
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('surface_id', $data ?? [], null);
         $this->setIfExists('index', $data ?? [], null);
-        $this->setIfExists('size', $data ?? [], null);
-        $this->setIfExists('position', $data ?? [], null);
         $this->setIfExists('mode', $data ?? [], null);
         $this->setIfExists('constraints', $data ?? [], null);
         $this->setIfExists('limited_color_settings', $data ?? [], null);
@@ -485,74 +471,6 @@ class DesignSurfaceContainerDto implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable index cannot be null');
         }
         $this->container['index'] = $index;
-
-        return $this;
-    }
-
-    /**
-     * Gets size
-     *
-     * @return \Aurigma\DesignAtoms\Model\DesignSurfaceContainerDtoSize|null
-     */
-    public function getSize()
-    {
-        return $this->container['size'];
-    }
-
-    /**
-     * Sets size
-     *
-     * @param \Aurigma\DesignAtoms\Model\DesignSurfaceContainerDtoSize|null $size size
-     *
-     * @return self
-     */
-    public function setSize($size)
-    {
-        if (is_null($size)) {
-            array_push($this->openAPINullablesSetToNull, 'size');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('size', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['size'] = $size;
-
-        return $this;
-    }
-
-    /**
-     * Gets position
-     *
-     * @return \Aurigma\DesignAtoms\Model\DesignSurfaceContainerDtoPosition|null
-     */
-    public function getPosition()
-    {
-        return $this->container['position'];
-    }
-
-    /**
-     * Sets position
-     *
-     * @param \Aurigma\DesignAtoms\Model\DesignSurfaceContainerDtoPosition|null $position position
-     *
-     * @return self
-     */
-    public function setPosition($position)
-    {
-        if (is_null($position)) {
-            array_push($this->openAPINullablesSetToNull, 'position');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('position', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['position'] = $position;
 
         return $this;
     }

@@ -57,8 +57,6 @@ docs/Model/DesignSurfaceContainerDtoColorlessSettings.md
 docs/Model/DesignSurfaceContainerDtoConstraints.md
 docs/Model/DesignSurfaceContainerDtoFullColorSettings.md
 docs/Model/DesignSurfaceContainerDtoLimitedColorSettings.md
-docs/Model/DesignSurfaceContainerDtoPosition.md
-docs/Model/DesignSurfaceContainerDtoSize.md
 docs/Model/DesignSurfaceContainerParams.md
 docs/Model/DesignSurfaceContainerParamsColorlessSettings.md
 docs/Model/DesignSurfaceContainerParamsConstraints.md
@@ -206,8 +204,6 @@ lib/Model/DesignSurfaceContainerDtoColorlessSettings.php
 lib/Model/DesignSurfaceContainerDtoConstraints.php
 lib/Model/DesignSurfaceContainerDtoFullColorSettings.php
 lib/Model/DesignSurfaceContainerDtoLimitedColorSettings.php
-lib/Model/DesignSurfaceContainerDtoPosition.php
-lib/Model/DesignSurfaceContainerDtoSize.php
 lib/Model/DesignSurfaceContainerParams.php
 lib/Model/DesignSurfaceContainerParamsColorlessSettings.php
 lib/Model/DesignSurfaceContainerParamsConstraints.php

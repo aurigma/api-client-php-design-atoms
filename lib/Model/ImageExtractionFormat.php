@@ -43,6 +43,8 @@ class ImageExtractionFormat
     /**
      * Possible values of this enum
      */
+    public const AS_IS = 'AsIs';
+
     public const JPEG = 'Jpeg';
 
     public const PNG = 'Png';
@@ -54,6 +56,7 @@ class ImageExtractionFormat
     public static function getAllowableEnumValues()
     {
         return [
+            self::AS_IS,
             self::JPEG,
             self::PNG
         ];
