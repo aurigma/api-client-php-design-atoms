@@ -60,10 +60,10 @@ class DesignPrintAreaParams implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPITypes = [
         'name' => 'string',
         'surface_id' => 'string',
-        'size' => '\Aurigma\DesignAtoms\Model\DesignPrintAreaParamsSize',
-        'position' => '\Aurigma\DesignAtoms\Model\DesignPrintAreaParamsPosition',
-        'bleed' => '\Aurigma\DesignAtoms\Model\DesignPrintAreaParamsBleed',
-        'slug' => '\Aurigma\DesignAtoms\Model\DesignPrintAreaParamsSlug',
+        'size' => '\Aurigma\DesignAtoms\Model\CreatePrintAreaModelSize',
+        'position' => '\Aurigma\DesignAtoms\Model\CreatePrintAreaModelPosition',
+        'bleed' => '\Aurigma\DesignAtoms\Model\CreatePrintAreaModelBleed',
+        'slug' => '\Aurigma\DesignAtoms\Model\CreatePrintAreaModelSlug',
         'shape' => 'string'
     ];
 
@@ -403,7 +403,7 @@ class DesignPrintAreaParams implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets size
      *
-     * @return \Aurigma\DesignAtoms\Model\DesignPrintAreaParamsSize|null
+     * @return \Aurigma\DesignAtoms\Model\CreatePrintAreaModelSize|null
      */
     public function getSize()
     {
@@ -413,7 +413,7 @@ class DesignPrintAreaParams implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets size
      *
-     * @param \Aurigma\DesignAtoms\Model\DesignPrintAreaParamsSize|null $size size
+     * @param \Aurigma\DesignAtoms\Model\CreatePrintAreaModelSize|null $size size
      *
      * @return self
      */
@@ -437,7 +437,7 @@ class DesignPrintAreaParams implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets position
      *
-     * @return \Aurigma\DesignAtoms\Model\DesignPrintAreaParamsPosition|null
+     * @return \Aurigma\DesignAtoms\Model\CreatePrintAreaModelPosition|null
      */
     public function getPosition()
     {
@@ -447,7 +447,7 @@ class DesignPrintAreaParams implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets position
      *
-     * @param \Aurigma\DesignAtoms\Model\DesignPrintAreaParamsPosition|null $position position
+     * @param \Aurigma\DesignAtoms\Model\CreatePrintAreaModelPosition|null $position position
      *
      * @return self
      */
@@ -471,7 +471,7 @@ class DesignPrintAreaParams implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets bleed
      *
-     * @return \Aurigma\DesignAtoms\Model\DesignPrintAreaParamsBleed|null
+     * @return \Aurigma\DesignAtoms\Model\CreatePrintAreaModelBleed|null
      */
     public function getBleed()
     {
@@ -481,7 +481,7 @@ class DesignPrintAreaParams implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets bleed
      *
-     * @param \Aurigma\DesignAtoms\Model\DesignPrintAreaParamsBleed|null $bleed bleed
+     * @param \Aurigma\DesignAtoms\Model\CreatePrintAreaModelBleed|null $bleed bleed
      *
      * @return self
      */
@@ -505,7 +505,7 @@ class DesignPrintAreaParams implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets slug
      *
-     * @return \Aurigma\DesignAtoms\Model\DesignPrintAreaParamsSlug|null
+     * @return \Aurigma\DesignAtoms\Model\CreatePrintAreaModelSlug|null
      */
     public function getSlug()
     {
@@ -515,7 +515,7 @@ class DesignPrintAreaParams implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets slug
      *
-     * @param \Aurigma\DesignAtoms\Model\DesignPrintAreaParamsSlug|null $slug slug
+     * @param \Aurigma\DesignAtoms\Model\CreatePrintAreaModelSlug|null $slug slug
      *
      * @return self
      */

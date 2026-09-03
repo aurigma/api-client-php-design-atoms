@@ -10,6 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**designAtomsPrintProductAddDesignSurfaceContainerModel()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductAddDesignSurfaceContainerModel) | **POST** /api/atoms/v1/designs/{id}/print-product/containers/model | Inserts a new print-product container provided as a json-serialized model to the certain surface in an existing design file.  Print-product container identifier will be reset by auto-generated value to prevent identifiers collisions. |
 | [**designAtomsPrintProductAddDesignSurfaceItemModel()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductAddDesignSurfaceItemModel) | **POST** /api/atoms/v1/designs/{id}/print-product/items/model | Inserts a new print-product item provided as a json-serialized model to the specified surface in an existing design file.  Item identifier will be reset by auto-generated value to prevent identifiers collisions. |
 | [**designAtomsPrintProductAddDesignSurfaceModel()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductAddDesignSurfaceModel) | **POST** /api/atoms/v1/designs/{id}/print-product/surfaces/model | Inserts a new surface provided as a json-serialized model at the specified position in an existing design file.  All design elements identifiers within the surface (including surface identifier) will be reset by auto-generated values to prevent identifiers collisions. |
+| [**designAtomsPrintProductCreateDesignProduct()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductCreateDesignProduct) | **POST** /api/atoms/v1/designs/print-product | Creates a new print product and saves it as a design file. |
 | [**designAtomsPrintProductDeleteDesignPrintArea()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductDeleteDesignPrintArea) | **DELETE** /api/atoms/v1/designs/{id}/print-product/print-areas/{printAreaId} | Deletes a specified print-area in an existing design file. |
 | [**designAtomsPrintProductDeleteDesignSurface()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductDeleteDesignSurface) | **DELETE** /api/atoms/v1/designs/{id}/print-product/surfaces/{surfaceId} | Deletes a specified print-product surface in an existing design file. |
 | [**designAtomsPrintProductDeleteDesignSurfaceContainer()**](DesignAtomsPrintProductApi.md#designAtomsPrintProductDeleteDesignSurfaceContainer) | **DELETE** /api/atoms/v1/designs/{id}/print-product/containers/{containerId} | Deletes a specified print-product container in an existing design file. |
@@ -530,6 +531,90 @@ try {
 ### Return type
 
 **mixed**
+
+### Authorization
+
+[ApiKey](../../README.md#ApiKey), [OAuth2ClientCredentials](../../README.md#OAuth2ClientCredentials), [OAuth2Code](../../README.md#OAuth2Code), [OAuth2Implicit](../../README.md#OAuth2Implicit), [Bearer](../../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `designAtomsPrintProductCreateDesignProduct()`
+
+```php
+designAtomsPrintProductCreateDesignProduct($name, $path, $private_storage_owner, $tenant_id, $create_product_model): \Aurigma\DesignAtoms\Model\DesignInfo
+```
+
+Creates a new print product and saves it as a design file.
+
+Design with specified identifier must exist at desired storage.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: ApiKey
+$config = Aurigma\DesignAtoms\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Aurigma\DesignAtoms\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+// Configure OAuth2 access token for authorization: OAuth2ClientCredentials
+$config = Aurigma\DesignAtoms\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+// Configure OAuth2 access token for authorization: OAuth2Code
+$config = Aurigma\DesignAtoms\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+// Configure OAuth2 access token for authorization: OAuth2Implicit
+$config = Aurigma\DesignAtoms\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+// Configure API key authorization: Bearer
+$config = Aurigma\DesignAtoms\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Aurigma\DesignAtoms\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+
+$apiInstance = new Aurigma\DesignAtoms\Api\DesignAtomsPrintProductApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$name = 'name_example'; // string | Design file name.
+$path = 'path_example'; // string | Design file path.
+$private_storage_owner = 'private_storage_owner_example'; // string | Private storage owner identifier.
+$tenant_id = 56; // int | Tenant ID.
+$create_product_model = new \Aurigma\DesignAtoms\Model\CreateProductModel(); // \Aurigma\DesignAtoms\Model\CreateProductModel | Patch product parameters model.
+
+try {
+    $result = $apiInstance->designAtomsPrintProductCreateDesignProduct($name, $path, $private_storage_owner, $tenant_id, $create_product_model);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DesignAtomsPrintProductApi->designAtomsPrintProductCreateDesignProduct: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **name** | **string**| Design file name. | [optional] |
+| **path** | **string**| Design file path. | [optional] |
+| **private_storage_owner** | **string**| Private storage owner identifier. | [optional] |
+| **tenant_id** | **int**| Tenant ID. | [optional] |
+| **create_product_model** | [**\Aurigma\DesignAtoms\Model\CreateProductModel**](../Model/CreateProductModel.md)| Patch product parameters model. | [optional] |
+
+### Return type
+
+[**\Aurigma\DesignAtoms\Model\DesignInfo**](../Model/DesignInfo.md)
 
 ### Authorization
 
