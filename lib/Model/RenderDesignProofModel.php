@@ -60,7 +60,7 @@ class RenderDesignProofModel implements ModelInterface, ArrayAccess, \JsonSerial
         'design_id' => 'string',
         'owner_id' => 'string',
         'rendering_config' => '\Aurigma\DesignAtoms\Model\RenderDesignProofModelRenderingConfig',
-        'variable_data' => '\Aurigma\DesignAtoms\Model\VariableInfo[]'
+        'variable_data' => '\Aurigma\DesignAtoms\Model\VariableData[]'
     ];
 
     /**
@@ -415,7 +415,7 @@ class RenderDesignProofModel implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets variable_data
      *
-     * @return \Aurigma\DesignAtoms\Model\VariableInfo[]|null
+     * @return \Aurigma\DesignAtoms\Model\VariableData[]|null
      */
     public function getVariableData()
     {
@@ -425,7 +425,7 @@ class RenderDesignProofModel implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets variable_data
      *
-     * @param \Aurigma\DesignAtoms\Model\VariableInfo[]|null $variable_data Variable (user) data for design variable fields in the proof image.
+     * @param \Aurigma\DesignAtoms\Model\VariableData[]|null $variable_data Variable (user) data for design variable fields in the proof image.
      *
      * @return self
      */

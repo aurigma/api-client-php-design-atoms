@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **format** | [**\Aurigma\DesignAtoms\Model\ProductProofFormat**](ProductProofFormat.md) | Desired proof image format. | [optional]
 **interpolation_mode** | [**\Aurigma\DesignAtoms\Model\ProductProofInterpolationMode**](ProductProofInterpolationMode.md) | Desired proof image interpolation. | [optional]
 **safety_lines_enabled** | **bool** | Defines whether safety lines should be visualized. | [optional]
-**visualize_print_areas** | **bool** | Defines whether print areas borders should be visualized. | [optional]
+**visualize_print_areas** | **bool** | Defines whether print areas borders should be visualized. | [optional] [default to false]
 **watermark_enabled** | **bool** | Defines whether watermark should be included. | [optional]
 **watermark_opacity** | **float** | Defines watermark opacity (in range 0 .. 1.0). | [optional]
 **watermark_repeat** | **bool** | Defines whether watermark should be repeated. | [optional]

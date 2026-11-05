@@ -62,7 +62,7 @@ class RenderDesignProofToResourceModel implements ModelInterface, ArrayAccess, \
         'design_id' => 'string',
         'owner_id' => 'string',
         'rendering_config' => '\Aurigma\DesignAtoms\Model\RenderDesignProofModelRenderingConfig',
-        'variable_data' => '\Aurigma\DesignAtoms\Model\VariableInfo[]'
+        'variable_data' => '\Aurigma\DesignAtoms\Model\VariableData[]'
     ];
 
     /**
@@ -497,7 +497,7 @@ class RenderDesignProofToResourceModel implements ModelInterface, ArrayAccess, \
     /**
      * Gets variable_data
      *
-     * @return \Aurigma\DesignAtoms\Model\VariableInfo[]|null
+     * @return \Aurigma\DesignAtoms\Model\VariableData[]|null
      */
     public function getVariableData()
     {
@@ -507,7 +507,7 @@ class RenderDesignProofToResourceModel implements ModelInterface, ArrayAccess, \
     /**
      * Sets variable_data
      *
-     * @param \Aurigma\DesignAtoms\Model\VariableInfo[]|null $variable_data Variable (user) data for design variable fields in the proof image.
+     * @param \Aurigma\DesignAtoms\Model\VariableData[]|null $variable_data Variable (user) data for design variable fields in the proof image.
      *
      * @return self
      */

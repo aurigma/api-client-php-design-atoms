@@ -305,7 +305,7 @@ class RenderProductModelRenderingConfig implements ModelInterface, ArrayAccess, 
         $this->setIfExists('format', $data ?? [], null);
         $this->setIfExists('interpolation_mode', $data ?? [], null);
         $this->setIfExists('safety_lines_enabled', $data ?? [], null);
-        $this->setIfExists('visualize_print_areas', $data ?? [], null);
+        $this->setIfExists('visualize_print_areas', $data ?? [], false);
         $this->setIfExists('watermark_enabled', $data ?? [], null);
         $this->setIfExists('watermark_opacity', $data ?? [], null);
         $this->setIfExists('watermark_repeat', $data ?? [], null);

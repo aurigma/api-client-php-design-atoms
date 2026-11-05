@@ -60,11 +60,12 @@ class RenderDesignPreviewToResourceModel implements ModelInterface, ArrayAccess,
         'preview_resource_params' => '\Aurigma\DesignAtoms\Model\ExtractItemImageToResourceModelPreviewResourceParams',
         'overwrite_existing_resource' => 'bool',
         'design_id' => 'string',
-        'mockup_id' => 'string',
         'owner_id' => 'string',
+        'mockup_strategy' => '\Aurigma\DesignAtoms\Model\DesignPreviewMockupStrategy',
+        'mockup_id' => 'string',
         'mockup_owner_id' => 'string',
         'rendering_config' => '\Aurigma\DesignAtoms\Model\RenderDesignPreviewModelRenderingConfig',
-        'variable_data' => '\Aurigma\DesignAtoms\Model\VariableInfo[]'
+        'variable_data' => '\Aurigma\DesignAtoms\Model\VariableData[]'
     ];
 
     /**
@@ -78,8 +79,9 @@ class RenderDesignPreviewToResourceModel implements ModelInterface, ArrayAccess,
         'preview_resource_params' => null,
         'overwrite_existing_resource' => null,
         'design_id' => null,
-        'mockup_id' => null,
         'owner_id' => null,
+        'mockup_strategy' => null,
+        'mockup_id' => null,
         'mockup_owner_id' => null,
         'rendering_config' => null,
         'variable_data' => null
@@ -94,8 +96,9 @@ class RenderDesignPreviewToResourceModel implements ModelInterface, ArrayAccess,
         'preview_resource_params' => true,
         'overwrite_existing_resource' => true,
         'design_id' => true,
-        'mockup_id' => true,
         'owner_id' => true,
+        'mockup_strategy' => false,
+        'mockup_id' => true,
         'mockup_owner_id' => true,
         'rendering_config' => true,
         'variable_data' => true
@@ -190,8 +193,9 @@ class RenderDesignPreviewToResourceModel implements ModelInterface, ArrayAccess,
         'preview_resource_params' => 'previewResourceParams',
         'overwrite_existing_resource' => 'overwriteExistingResource',
         'design_id' => 'designId',
-        'mockup_id' => 'mockupId',
         'owner_id' => 'ownerId',
+        'mockup_strategy' => 'mockupStrategy',
+        'mockup_id' => 'mockupId',
         'mockup_owner_id' => 'mockupOwnerId',
         'rendering_config' => 'renderingConfig',
         'variable_data' => 'variableData'
@@ -206,8 +210,9 @@ class RenderDesignPreviewToResourceModel implements ModelInterface, ArrayAccess,
         'preview_resource_params' => 'setPreviewResourceParams',
         'overwrite_existing_resource' => 'setOverwriteExistingResource',
         'design_id' => 'setDesignId',
-        'mockup_id' => 'setMockupId',
         'owner_id' => 'setOwnerId',
+        'mockup_strategy' => 'setMockupStrategy',
+        'mockup_id' => 'setMockupId',
         'mockup_owner_id' => 'setMockupOwnerId',
         'rendering_config' => 'setRenderingConfig',
         'variable_data' => 'setVariableData'
@@ -222,8 +227,9 @@ class RenderDesignPreviewToResourceModel implements ModelInterface, ArrayAccess,
         'preview_resource_params' => 'getPreviewResourceParams',
         'overwrite_existing_resource' => 'getOverwriteExistingResource',
         'design_id' => 'getDesignId',
-        'mockup_id' => 'getMockupId',
         'owner_id' => 'getOwnerId',
+        'mockup_strategy' => 'getMockupStrategy',
+        'mockup_id' => 'getMockupId',
         'mockup_owner_id' => 'getMockupOwnerId',
         'rendering_config' => 'getRenderingConfig',
         'variable_data' => 'getVariableData'
@@ -289,8 +295,9 @@ class RenderDesignPreviewToResourceModel implements ModelInterface, ArrayAccess,
         $this->setIfExists('preview_resource_params', $data ?? [], null);
         $this->setIfExists('overwrite_existing_resource', $data ?? [], null);
         $this->setIfExists('design_id', $data ?? [], null);
-        $this->setIfExists('mockup_id', $data ?? [], null);
         $this->setIfExists('owner_id', $data ?? [], null);
+        $this->setIfExists('mockup_strategy', $data ?? [], null);
+        $this->setIfExists('mockup_id', $data ?? [], null);
         $this->setIfExists('mockup_owner_id', $data ?? [], null);
         $this->setIfExists('rendering_config', $data ?? [], null);
         $this->setIfExists('variable_data', $data ?? [], null);
@@ -441,40 +448,6 @@ class RenderDesignPreviewToResourceModel implements ModelInterface, ArrayAccess,
     }
 
     /**
-     * Gets mockup_id
-     *
-     * @return string|null
-     */
-    public function getMockupId()
-    {
-        return $this->container['mockup_id'];
-    }
-
-    /**
-     * Sets mockup_id
-     *
-     * @param string|null $mockup_id Mockup identifier.  Used to get mockup file from public storage.
-     *
-     * @return self
-     */
-    public function setMockupId($mockup_id)
-    {
-        if (is_null($mockup_id)) {
-            array_push($this->openAPINullablesSetToNull, 'mockup_id');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('mockup_id', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['mockup_id'] = $mockup_id;
-
-        return $this;
-    }
-
-    /**
      * Gets owner_id
      *
      * @return string|null
@@ -504,6 +477,67 @@ class RenderDesignPreviewToResourceModel implements ModelInterface, ArrayAccess,
             }
         }
         $this->container['owner_id'] = $owner_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets mockup_strategy
+     *
+     * @return \Aurigma\DesignAtoms\Model\DesignPreviewMockupStrategy|null
+     */
+    public function getMockupStrategy()
+    {
+        return $this->container['mockup_strategy'];
+    }
+
+    /**
+     * Sets mockup_strategy
+     *
+     * @param \Aurigma\DesignAtoms\Model\DesignPreviewMockupStrategy|null $mockup_strategy mockup_strategy
+     *
+     * @return self
+     */
+    public function setMockupStrategy($mockup_strategy)
+    {
+        if (is_null($mockup_strategy)) {
+            throw new \InvalidArgumentException('non-nullable mockup_strategy cannot be null');
+        }
+        $this->container['mockup_strategy'] = $mockup_strategy;
+
+        return $this;
+    }
+
+    /**
+     * Gets mockup_id
+     *
+     * @return string|null
+     */
+    public function getMockupId()
+    {
+        return $this->container['mockup_id'];
+    }
+
+    /**
+     * Sets mockup_id
+     *
+     * @param string|null $mockup_id Mockup identifier.  Used to get mockup file from public storage.
+     *
+     * @return self
+     */
+    public function setMockupId($mockup_id)
+    {
+        if (is_null($mockup_id)) {
+            array_push($this->openAPINullablesSetToNull, 'mockup_id');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('mockup_id', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['mockup_id'] = $mockup_id;
 
         return $this;
     }
@@ -579,7 +613,7 @@ class RenderDesignPreviewToResourceModel implements ModelInterface, ArrayAccess,
     /**
      * Gets variable_data
      *
-     * @return \Aurigma\DesignAtoms\Model\VariableInfo[]|null
+     * @return \Aurigma\DesignAtoms\Model\VariableData[]|null
      */
     public function getVariableData()
     {
@@ -589,7 +623,7 @@ class RenderDesignPreviewToResourceModel implements ModelInterface, ArrayAccess,
     /**
      * Sets variable_data
      *
-     * @param \Aurigma\DesignAtoms\Model\VariableInfo[]|null $variable_data Variable (user) data for design variable fields in the preview image.
+     * @param \Aurigma\DesignAtoms\Model\VariableData[]|null $variable_data Variable (user) data for design variable fields in the preview image.
      *
      * @return self
      */

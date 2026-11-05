@@ -60,7 +60,8 @@ class VariableInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'name' => 'string',
         'value' => 'string',
-        'type' => 'string'
+        'type' => 'string',
+        'constraints' => 'array<string,string>'
     ];
 
     /**
@@ -73,7 +74,8 @@ class VariableInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'name' => null,
         'value' => null,
-        'type' => null
+        'type' => null,
+        'constraints' => null
     ];
 
     /**
@@ -84,7 +86,8 @@ class VariableInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'name' => true,
         'value' => true,
-        'type' => true
+        'type' => true,
+        'constraints' => true
     ];
 
     /**
@@ -175,7 +178,8 @@ class VariableInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'name' => 'name',
         'value' => 'value',
-        'type' => 'type'
+        'type' => 'type',
+        'constraints' => 'constraints'
     ];
 
     /**
@@ -186,7 +190,8 @@ class VariableInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'name' => 'setName',
         'value' => 'setValue',
-        'type' => 'setType'
+        'type' => 'setType',
+        'constraints' => 'setConstraints'
     ];
 
     /**
@@ -197,7 +202,8 @@ class VariableInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'name' => 'getName',
         'value' => 'getValue',
-        'type' => 'getType'
+        'type' => 'getType',
+        'constraints' => 'getConstraints'
     ];
 
     /**
@@ -260,6 +266,7 @@ class VariableInfo implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('value', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('constraints', $data ?? [], null);
     }
 
     /**
@@ -402,6 +409,40 @@ class VariableInfo implements ModelInterface, ArrayAccess, \JsonSerializable
             }
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets constraints
+     *
+     * @return array<string,string>|null
+     */
+    public function getConstraints()
+    {
+        return $this->container['constraints'];
+    }
+
+    /**
+     * Sets constraints
+     *
+     * @param array<string,string>|null $constraints Variable constraints.
+     *
+     * @return self
+     */
+    public function setConstraints($constraints)
+    {
+        if (is_null($constraints)) {
+            array_push($this->openAPINullablesSetToNull, 'constraints');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('constraints', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['constraints'] = $constraints;
 
         return $this;
     }

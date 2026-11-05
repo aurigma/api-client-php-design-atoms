@@ -277,7 +277,7 @@ class RenderDesignPreviewModelRenderingConfig implements ModelInterface, ArrayAc
     {
         $this->setIfExists('surface_index', $data ?? [], null);
         $this->setIfExists('stub', $data ?? [], null);
-        $this->setIfExists('visualize_print_areas', $data ?? [], null);
+        $this->setIfExists('visualize_print_areas', $data ?? [], false);
         $this->setIfExists('width', $data ?? [], null);
         $this->setIfExists('height', $data ?? [], null);
         $this->setIfExists('file_format', $data ?? [], null);

@@ -49,12 +49,15 @@ docs/Model/DesignItemDataModelFont.md
 docs/Model/DesignItemFontSettingsModel.md
 docs/Model/DesignParameters.md
 docs/Model/DesignParametersMeasureUnit.md
+docs/Model/DesignPreviewMockupStrategy.md
+docs/Model/DesignPreviewRenderingConfig.md
 docs/Model/DesignPrintAreaDto.md
 docs/Model/DesignPrintAreaDtoBleed.md
 docs/Model/DesignPrintAreaDtoPosition.md
 docs/Model/DesignPrintAreaDtoSize.md
 docs/Model/DesignPrintAreaDtoSlug.md
 docs/Model/DesignPrintAreaParams.md
+docs/Model/DesignProofRenderingConfig.md
 docs/Model/DesignSurfaceContainerDto.md
 docs/Model/DesignSurfaceContainerDtoColorlessSettings.md
 docs/Model/DesignSurfaceContainerDtoConstraints.md
@@ -112,7 +115,6 @@ docs/Model/PreviewColorSettings.md
 docs/Model/ProblemDetails.md
 docs/Model/ProductPatchType.md
 docs/Model/ProductPreviewFormat.md
-docs/Model/ProductPreviewRenderingConfig.md
 docs/Model/ProductProofFormat.md
 docs/Model/ProductProofInterpolationMode.md
 docs/Model/ProductProofRenderingConfig.md
@@ -135,6 +137,7 @@ docs/Model/RenderProductModelRenderingConfig.md
 docs/Model/ResourceInfoDto.md
 docs/Model/ResourceParams.md
 docs/Model/SetEditorMockupsModel.md
+docs/Model/SetVariablesModel.md
 docs/Model/SizeDto.md
 docs/Model/SizeModel.md
 docs/Model/TextAlignment.md
@@ -142,6 +145,7 @@ docs/Model/TextVerticalAlignment.md
 docs/Model/UpdateColorsRequest.md
 docs/Model/UpdateHandlerRequest.md
 docs/Model/UpdateImageHandlerRequest.md
+docs/Model/VariableData.md
 docs/Model/VariableInfo.md
 docs/Model/VariablesModel.md
 docs/Model/VdpDataModel.md
@@ -197,12 +201,15 @@ lib/Model/DesignItemDataModelFont.php
 lib/Model/DesignItemFontSettingsModel.php
 lib/Model/DesignParameters.php
 lib/Model/DesignParametersMeasureUnit.php
+lib/Model/DesignPreviewMockupStrategy.php
+lib/Model/DesignPreviewRenderingConfig.php
 lib/Model/DesignPrintAreaDto.php
 lib/Model/DesignPrintAreaDtoBleed.php
 lib/Model/DesignPrintAreaDtoPosition.php
 lib/Model/DesignPrintAreaDtoSize.php
 lib/Model/DesignPrintAreaDtoSlug.php
 lib/Model/DesignPrintAreaParams.php
+lib/Model/DesignProofRenderingConfig.php
 lib/Model/DesignSurfaceContainerDto.php
 lib/Model/DesignSurfaceContainerDtoColorlessSettings.php
 lib/Model/DesignSurfaceContainerDtoConstraints.php
@@ -261,7 +268,6 @@ lib/Model/PreviewColorSettings.php
 lib/Model/ProblemDetails.php
 lib/Model/ProductPatchType.php
 lib/Model/ProductPreviewFormat.php
-lib/Model/ProductPreviewRenderingConfig.php
 lib/Model/ProductProofFormat.php
 lib/Model/ProductProofInterpolationMode.php
 lib/Model/ProductProofRenderingConfig.php
@@ -284,6 +290,7 @@ lib/Model/RenderProductModelRenderingConfig.php
 lib/Model/ResourceInfoDto.php
 lib/Model/ResourceParams.php
 lib/Model/SetEditorMockupsModel.php
+lib/Model/SetVariablesModel.php
 lib/Model/SizeDto.php
 lib/Model/SizeModel.php
 lib/Model/TextAlignment.php
@@ -291,6 +298,7 @@ lib/Model/TextVerticalAlignment.php
 lib/Model/UpdateColorsRequest.php
 lib/Model/UpdateHandlerRequest.php
 lib/Model/UpdateImageHandlerRequest.php
+lib/Model/VariableData.php
 lib/Model/VariableInfo.php
 lib/Model/VariablesModel.php
 lib/Model/VdpDataModel.php

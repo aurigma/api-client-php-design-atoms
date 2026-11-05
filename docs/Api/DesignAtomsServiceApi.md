@@ -2086,7 +2086,7 @@ void (empty response body)
 ## `designAtomsServiceSetVariables()`
 
 ```php
-designAtomsServiceSetVariables($id, $private_storage_owner, $tenant_id, $variables_model)
+designAtomsServiceSetVariables($id, $private_storage_owner, $tenant_id, $set_variables_model)
 ```
 
 Saves variable items values for design file taken from storage.
@@ -2127,10 +2127,10 @@ $apiInstance = new Aurigma\DesignAtoms\Api\DesignAtomsServiceApi(
 $id = 'id_example'; // string | Design identifier.
 $private_storage_owner = 'private_storage_owner_example'; // string | Private storage owner identifier.
 $tenant_id = 56; // int | Tenant ID.
-$variables_model = new \Aurigma\DesignAtoms\Model\VariablesModel(); // \Aurigma\DesignAtoms\Model\VariablesModel | Design variable values.
+$set_variables_model = new \Aurigma\DesignAtoms\Model\SetVariablesModel(); // \Aurigma\DesignAtoms\Model\SetVariablesModel | Design variable values.
 
 try {
-    $apiInstance->designAtomsServiceSetVariables($id, $private_storage_owner, $tenant_id, $variables_model);
+    $apiInstance->designAtomsServiceSetVariables($id, $private_storage_owner, $tenant_id, $set_variables_model);
 } catch (Exception $e) {
     echo 'Exception when calling DesignAtomsServiceApi->designAtomsServiceSetVariables: ', $e->getMessage(), PHP_EOL;
 }
@@ -2143,7 +2143,7 @@ try {
 | **id** | **string**| Design identifier. | |
 | **private_storage_owner** | **string**| Private storage owner identifier. | [optional] |
 | **tenant_id** | **int**| Tenant ID. | [optional] |
-| **variables_model** | [**\Aurigma\DesignAtoms\Model\VariablesModel**](../Model/VariablesModel.md)| Design variable values. | [optional] |
+| **set_variables_model** | [**\Aurigma\DesignAtoms\Model\SetVariablesModel**](../Model/SetVariablesModel.md)| Design variable values. | [optional] |
 
 ### Return type
 

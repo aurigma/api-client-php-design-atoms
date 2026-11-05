@@ -9780,16 +9780,16 @@ class DesignAtomsServiceApi
      * @param  string $id Design identifier. (required)
      * @param  string $private_storage_owner Private storage owner identifier. (optional)
      * @param  int $tenant_id Tenant ID. (optional)
-     * @param  \Aurigma\DesignAtoms\Model\VariablesModel $variables_model Design variable values. (optional)
+     * @param  \Aurigma\DesignAtoms\Model\SetVariablesModel $set_variables_model Design variable values. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsServiceSetVariables'] to see the possible values for this operation
      *
      * @throws \Aurigma\DesignAtoms\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function designAtomsServiceSetVariables($id, $private_storage_owner = null, $tenant_id = null, $variables_model = null, string $contentType = self::contentTypes['designAtomsServiceSetVariables'][0])
+    public function designAtomsServiceSetVariables($id, $private_storage_owner = null, $tenant_id = null, $set_variables_model = null, string $contentType = self::contentTypes['designAtomsServiceSetVariables'][0])
     {
-        $this->designAtomsServiceSetVariablesWithHttpInfo($id, $private_storage_owner, $tenant_id, $variables_model, $contentType);
+        $this->designAtomsServiceSetVariablesWithHttpInfo($id, $private_storage_owner, $tenant_id, $set_variables_model, $contentType);
     }
 
     /**
@@ -9800,16 +9800,16 @@ class DesignAtomsServiceApi
      * @param  string $id Design identifier. (required)
      * @param  string $private_storage_owner Private storage owner identifier. (optional)
      * @param  int $tenant_id Tenant ID. (optional)
-     * @param  \Aurigma\DesignAtoms\Model\VariablesModel $variables_model Design variable values. (optional)
+     * @param  \Aurigma\DesignAtoms\Model\SetVariablesModel $set_variables_model Design variable values. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsServiceSetVariables'] to see the possible values for this operation
      *
      * @throws \Aurigma\DesignAtoms\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function designAtomsServiceSetVariablesWithHttpInfo($id, $private_storage_owner = null, $tenant_id = null, $variables_model = null, string $contentType = self::contentTypes['designAtomsServiceSetVariables'][0])
+    public function designAtomsServiceSetVariablesWithHttpInfo($id, $private_storage_owner = null, $tenant_id = null, $set_variables_model = null, string $contentType = self::contentTypes['designAtomsServiceSetVariables'][0])
     {
-        $request = $this->designAtomsServiceSetVariablesRequest($id, $private_storage_owner, $tenant_id, $variables_model, $contentType);
+        $request = $this->designAtomsServiceSetVariablesRequest($id, $private_storage_owner, $tenant_id, $set_variables_model, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9879,15 +9879,15 @@ class DesignAtomsServiceApi
      * @param  string $id Design identifier. (required)
      * @param  string $private_storage_owner Private storage owner identifier. (optional)
      * @param  int $tenant_id Tenant ID. (optional)
-     * @param  \Aurigma\DesignAtoms\Model\VariablesModel $variables_model Design variable values. (optional)
+     * @param  \Aurigma\DesignAtoms\Model\SetVariablesModel $set_variables_model Design variable values. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsServiceSetVariables'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function designAtomsServiceSetVariablesAsync($id, $private_storage_owner = null, $tenant_id = null, $variables_model = null, string $contentType = self::contentTypes['designAtomsServiceSetVariables'][0])
+    public function designAtomsServiceSetVariablesAsync($id, $private_storage_owner = null, $tenant_id = null, $set_variables_model = null, string $contentType = self::contentTypes['designAtomsServiceSetVariables'][0])
     {
-        return $this->designAtomsServiceSetVariablesAsyncWithHttpInfo($id, $private_storage_owner, $tenant_id, $variables_model, $contentType)
+        return $this->designAtomsServiceSetVariablesAsyncWithHttpInfo($id, $private_storage_owner, $tenant_id, $set_variables_model, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9903,16 +9903,16 @@ class DesignAtomsServiceApi
      * @param  string $id Design identifier. (required)
      * @param  string $private_storage_owner Private storage owner identifier. (optional)
      * @param  int $tenant_id Tenant ID. (optional)
-     * @param  \Aurigma\DesignAtoms\Model\VariablesModel $variables_model Design variable values. (optional)
+     * @param  \Aurigma\DesignAtoms\Model\SetVariablesModel $set_variables_model Design variable values. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsServiceSetVariables'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function designAtomsServiceSetVariablesAsyncWithHttpInfo($id, $private_storage_owner = null, $tenant_id = null, $variables_model = null, string $contentType = self::contentTypes['designAtomsServiceSetVariables'][0])
+    public function designAtomsServiceSetVariablesAsyncWithHttpInfo($id, $private_storage_owner = null, $tenant_id = null, $set_variables_model = null, string $contentType = self::contentTypes['designAtomsServiceSetVariables'][0])
     {
         $returnType = '';
-        $request = $this->designAtomsServiceSetVariablesRequest($id, $private_storage_owner, $tenant_id, $variables_model, $contentType);
+        $request = $this->designAtomsServiceSetVariablesRequest($id, $private_storage_owner, $tenant_id, $set_variables_model, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9943,13 +9943,13 @@ class DesignAtomsServiceApi
      * @param  string $id Design identifier. (required)
      * @param  string $private_storage_owner Private storage owner identifier. (optional)
      * @param  int $tenant_id Tenant ID. (optional)
-     * @param  \Aurigma\DesignAtoms\Model\VariablesModel $variables_model Design variable values. (optional)
+     * @param  \Aurigma\DesignAtoms\Model\SetVariablesModel $set_variables_model Design variable values. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['designAtomsServiceSetVariables'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function designAtomsServiceSetVariablesRequest($id, $private_storage_owner = null, $tenant_id = null, $variables_model = null, string $contentType = self::contentTypes['designAtomsServiceSetVariables'][0])
+    public function designAtomsServiceSetVariablesRequest($id, $private_storage_owner = null, $tenant_id = null, $set_variables_model = null, string $contentType = self::contentTypes['designAtomsServiceSetVariables'][0])
     {
 
         // verify the required parameter 'id' is set
@@ -10007,12 +10007,12 @@ class DesignAtomsServiceApi
         );
 
         // for model (json/xml)
-        if (isset($variables_model)) {
+        if (isset($set_variables_model)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($variables_model));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($set_variables_model));
             } else {
-                $httpBody = $variables_model;
+                $httpBody = $set_variables_model;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
